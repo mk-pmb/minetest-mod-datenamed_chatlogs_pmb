@@ -1,0 +1,2 @@
+# Path template (strftime) for log files to be created, relative to the world directory.
+rotating_chatlog_pmb.pathtpl (Log file path template, empty to disable) string ''
