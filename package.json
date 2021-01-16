@@ -1,0 +1,23 @@
+{ "name": "datenamed_chatlogs_pmb",
+  "version": "0.0.1",
+  "description": "Create logfiles in the world directory, with paths based on message time.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/minetest-mod-datenamed_chatlogs_pmb/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/minetest-mod-datenamed_chatlogs_pmb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/minetest-mod-datenamed_chatlogs_pmb/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+
+
+  "engines": { "minetest": "^5.3.0" },
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
