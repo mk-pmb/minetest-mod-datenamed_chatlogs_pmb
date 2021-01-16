@@ -25,6 +25,7 @@ end
 
 local function addStubMthd(m) MT[m] = function (...) print(m, ...) end end
 addStubMthd('log')
+addStubMthd('debug')
 
 local function addStubGetter(m, val)
   MT[m] = function (...)
@@ -32,6 +33,7 @@ local function addStubGetter(m, val)
     return val
   end
 end
+addStubGetter('get_current_modname', 'test:curmod')
 addStubGetter('get_worldpath', './tmp')
 addStubGetter('get_modpath', '..')
 
