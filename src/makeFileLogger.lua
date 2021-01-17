@@ -68,12 +68,29 @@ function api.checkReopenDest(L, now)
 end
 
 
+function api.defuseArgs(...)
+  local a = { ... }
+  local o = {}
+  local x, t, s
+  for i = 1, table.maxn(a) do
+    x = a[i]
+    t = type(x)
+    s = ((t == 'string')
+      or (t == 'number')
+      )
+    if not s then x = '<' .. t .. '>' end
+    o[i] = x
+  end
+  return o
+end
+
+
 function api.write(L, ...)
   local now = os.time()
   L:checkReopenDest(now)
   if not L.destFh then return end
-  now = now .. os.date(' %F %T', now)
-  local msg = table.concat({ now, ... }, '\t')
+  local msg = table.concat(L.defuseArgs(...), '\t')
+  msg = now .. os.date(' %F %T', now) .. '\t' .. msg
   local ok, err = pcall(api.writeDestLine, L, msg)
   L.destFh:flush()
   return nil

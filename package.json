@@ -1,5 +1,5 @@
 { "name": "datenamed_chatlogs_pmb",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Create logfiles in the world directory, with paths based on message time.",
   "keywords": [],
 

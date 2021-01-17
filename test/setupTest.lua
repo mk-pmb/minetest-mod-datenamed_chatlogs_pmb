@@ -7,7 +7,7 @@ local mockApi = require(luaLibPfx .. 'mockApi')
 
 dofile('../init.lua')
 
-mockApi.runHook('joinplayer', 'Bernd')
+mockApi.runHook('joinplayer', { name = 'Bernd' })
 mockApi.runHook('chat_message', 'Bernd', 'hi!')
 mockApi.runHook('leaveplayer', 'Bernd')
 
